@@ -2,7 +2,7 @@ import os
 from decouple import config, Csv
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 TEMPLATES_DIRS = os.path.join(BASE_DIR, 'templates')
 
 
@@ -27,6 +27,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # Project components
+    'pages',
 ]
 
 MIDDLEWARE = [
@@ -44,7 +46,7 @@ ROOT_URLCONF = 'learning_management_system.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [TEMPLATES_DIRS],
+        'DIRS': [TEMPLATES_DIRS,],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
