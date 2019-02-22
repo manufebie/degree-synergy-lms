@@ -4,10 +4,23 @@
 
 - [Django multiple settings](https://simpleisbetterthancomplex.com/tips/2017/07/03/django-tip-20-working-with-multiple-settings-modules.html)
 - [Django calendar tutorial](https://www.huiwenteo.com/normal/2018/07/24/django-calendar.html)
-- [Git brancher](https://confluence.atlassian.com/bitbucket/branching-a-repository-223217999.html)
+- [Git branches](https://confluence.atlassian.com/bitbucket/branching-a-repository-223217999.html)
 
 ## Summary
 
+## UX Design
+
+- Typography: 
+    - Raleway & Roboto Slab
+    - Open Sans & Open Sans condensed
+    - Fjalla One & Noto Sans
+- CSS Grid & Sass
+
+## Database 
+
+For both development and production will be using Postgress
+
+- DB: Postgresql
 
 ## Components
 A brief overview of the components. Explanation of what they should do.
