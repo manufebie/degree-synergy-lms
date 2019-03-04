@@ -10,11 +10,17 @@
 
 ## UX Design
 
+- Avoid hamburger menu
+- Users should be able to have a quick glance of the app 
 - Typography: 
     - Raleway & Roboto Slab
     - Open Sans & Open Sans condensed
     - Fjalla One & Noto Sans
 - CSS Grid & Sass
+- Top to bottom workflow
+    - Teamtreehouse
+    - Udemy
+    
 
 ## Database 
 

@@ -4,7 +4,6 @@ DEBUG = True
 
 INSTALLED_APPS += {
     'debug_toolbar',
-    'events',
 }
 
 MIDDLEWARE += [
@@ -26,3 +25,8 @@ DATABASES = {
 }
 
 INTERNAL_IPS = ['127.0.0.1']
+
+# Static stuff
+
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'assets')]
+

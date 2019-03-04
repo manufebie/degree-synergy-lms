@@ -1,13 +1,65 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Noto+Sans" rel="stylesheet"> 
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <title>{% block title %}{% endblock %}</title>
 </head>
 <body>
-    {% block body %}
-    {% endblock %}
+    <!-- Sidebar (on big screens) -->
+    <div class="navbar">
+        <div class="sidebar">
+            <ul class="nav">
+                <li>
+                    <a href="{% url 'home' %}" class="nav-item"><i class="fas fa-tachometer-alt"></i></a>
+                </li>
+                <li>
+                    <a href="{% url 'scheduler:events' %}" class="nav-item"><i class="fas fa-calendar-alt"></i></a>
+                </li>
+                <li>
+                    <a href="" class="nav-item"><i class="fas fa-users"></i></a>
+                </li>
+            </ul>
+
+            <div class="logout">
+                <a href=""><i class="fas fa-sign-out-alt"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="header">
+        <div class="container">
+            <section class="section">
+                <h4 class="header-text">Learning Management System &copy; 2019</h4>
+                <div class="profile">
+                    
+                    <h2 class="username">Username</h2>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- dashboard content -->
+    <div class="container">
+        <section class="main-section">
+            <!-- <div class="card">
+                <h1 class="heading-1">Degree Synergy International</h1>
+            </div> -->
+
+            {% block content %}{% endblock %}
+        </section>
+    </div>
+    <!-- End dashboard content -->
+
 </body>
 </html>
