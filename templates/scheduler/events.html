@@ -3,13 +3,14 @@
 {% block title %}Events{% endblock %}
 
 {% block content %}
-
 <div class="card">
     <div class="card-header">Calender</div>
     <!-- <h1 class="heading-1">Calendar</h1> -->
     <div class="card-body">
+        <a href="{% url 'scheduler:events' %}?{{ prev_month }}">Previous month</a>
+        <a href="{% url 'scheduler:events' %}?{{ next_month }}">Next month</a>
+        <br><br>
         {{ calendar }}
     </div>
 </div>
-
 {% endblock %}
